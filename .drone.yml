@@ -18,6 +18,8 @@ pipeline:
       - ls -ltr
       - touch step1file
       - ls -ltr step1file
+      - whoami
+      - id
 
   step2:
     image: gradle:v01

@@ -1,12 +1,22 @@
 ---
 pipeline:
 
+  rebuild_cache:
+    image: drillster/drone-volume-cache
+    restore: true
+    mount:
+      - ./.gradle
+    volumes:
+      - /tmp/cache:/cache
+
   step1:
     image: gradle:v01
     commands:
-      - gradle build
+      - echo this is step 1
+      - gradle -g ${DRONE_WORKSPACE}/.gradle build
 
   step2:
     image: gradle:v01
     commands:
-      - gradle build
+      - echo this is step 2
+      - gradle -g ${DRONE_WORKSPACE}/.gradle  build

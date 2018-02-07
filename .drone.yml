@@ -4,9 +4,9 @@ pipeline:
   step1:
     image: gradle
     commands:
-      - gradle build
+      - gradle -v
 
   step2:
     image: gradle
     commands:
-      - gradle build
+      - gradle -v

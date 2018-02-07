@@ -1,13 +1,13 @@
 ---
 pipeline:
 
-  restore_cache:
-    image: drillster/drone-volume-cache
-    restore: true
-    mount:
-      - ./.gradle
-    volumes:
-      - /tmp/cache:/cache
+  #restore_cache:
+  #  image: drillster/drone-volume-cache
+  #  restore: true
+  #  mount:
+  #    - ./.gradle
+  #  volumes:
+  #    - /tmp/cache:/cache
 
   step1:
     image: gradle:v01

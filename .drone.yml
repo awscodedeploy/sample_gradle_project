@@ -3,7 +3,7 @@ pipeline:
 
   restore_cache:
     image: drillster/drone-volume-cache
-    restore: false
+    restore: true
     mount:
       - ./.gradle
     volumes:
@@ -25,6 +25,7 @@ pipeline:
       - echo this is step 2
       - gradle -g $${DRONE_WORKSPACE}/.gradle  build
       - pwd
+      - ls -ltr
       - ls -ltr step1file
 
   #rebuild_cache:

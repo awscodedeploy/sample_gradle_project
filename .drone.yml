@@ -2,11 +2,11 @@
 pipeline:
 
   step1:
-    image: gradle
+    image: gradle:v01
     commands:
-      - gradle -v
+      - gradle build
 
   step2:
-    image: gradle
+    image: gradle:v01
     commands:
-      - gradle -v
+      - gradle build

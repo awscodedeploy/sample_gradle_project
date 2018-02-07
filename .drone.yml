@@ -14,12 +14,18 @@ pipeline:
     commands:
       - echo this is step 1
       - gradle -g $${DRONE_WORKSPACE}/.gradle build
+      - pwd
+      - ls -ltr
+      - touch step1file
+      - ls -ltr step1file
 
   step2:
     image: gradle:v01
     commands:
       - echo this is step 2
       - gradle -g $${DRONE_WORKSPACE}/.gradle  build
+      - pwd
+      - ls -ltr step1file
 
   #rebuild_cache:
   #  image: drillster/drone-volume-cache

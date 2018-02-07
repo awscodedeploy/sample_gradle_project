@@ -3,7 +3,7 @@ pipeline:
 
   rebuild_cache:
     image: drillster/drone-volume-cache
-    restore: true
+    restore: false
     mount:
       - ./.gradle
     volumes:

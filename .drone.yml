@@ -1,40 +1,12 @@
 ---
 pipeline:
 
-  #restore_cache:
-  #  image: drillster/drone-volume-cache
-  #  restore: true
-  #  mount:
-  #    - ./.gradle
-  #  volumes:
-  #    - /tmp/cache:/cache
-
   step1:
     image: gradle:v01
     commands:
-      - echo this is step 1
-      - gradle -g $${DRONE_WORKSPACE}/.gradle build
-      #- gradle build
-      - pwd
-      - ls -ltr
-      - touch step1file
-      - ls -ltr step1file
-      - whoami
-      - id
+      - echo $${AUTH_TOCKEN}
 
   step2:
     image: gradle:v01
     commands:
-      - echo this is step 2
-      - gradle -g $${DRONE_WORKSPACE}/.gradle  build
-      - pwd
-      - ls -ltr
-      - ls -ltr step1file
-
-  #rebuild_cache:
-  #  image: drillster/drone-volume-cache
-  #  rebuild: true
-  #  mount:
-  #    - ./.gradle
-  #  volumes:
-  #    - /tmp/cache:/cache
+      - echo $${AUTH_TOCKEN}

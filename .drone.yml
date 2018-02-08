@@ -3,7 +3,7 @@ pipeline:
 
   step1:
     image: gradle:v01
-    secrets: [AUTH_TOKEN]
+    secrets: [auth_token]
     commands:
       - echo $${AUTH_TOKEN}
 

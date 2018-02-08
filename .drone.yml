@@ -4,7 +4,10 @@ pipeline:
   step1:
     image: gradle:v02
     secrets: [auth_token, my_name]
-    cmds: 'testing command'
+    cmds:
+      - command1
+      - command2
+      
     #commands:
     #  - echo $${AUTH_TOKEN} $${MY_NAME}
     #  - echo $${PLUGIN_CMDS}

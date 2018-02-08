@@ -3,9 +3,9 @@ pipeline:
 
   step1:
     image: gradle:v01
-    secrets: [auth_token]
+    secrets: [auth_token, my_name]
     commands:
-      - echo $${auth_token}
+      - echo $${auth_token} $${my_name}
 
   step2:
     image: gradle:v01

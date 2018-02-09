@@ -2,11 +2,7 @@
 pipeline:
 
   step1:
-    image: gradle:v02
-    secrets: [auth_token, my_name]
-    cmds:
-      - command1
-      - command2
+    image: alpine:tput
       
     #commands:
     #  - echo $${AUTH_TOKEN} $${MY_NAME}

@@ -3,7 +3,6 @@ pipeline:
 
   step1:
     image: alpine:tput
-
     #commands:
     #  - echo $${AUTH_TOKEN} $${MY_NAME}
     #  - echo $${PLUGIN_CMDS}
